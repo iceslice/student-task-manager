@@ -1,0 +1,87 @@
+:root {
+  --bg: #eef3f1;
+  --surface: #ffffff;
+  --ink: #17332b;
+  --muted: #5d7770;
+  --accent: #1f7a5c;
+  --danger: #b3382c;
+  --line: #d3dfda;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+h1 { margin: 0 0 .5rem; font-size: 1.9rem; }
+h2 { margin: 0 0 .75rem; font-size: 1.05rem; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+}
+
+.form-row { display: flex; gap: .5rem; }
+
+input[type="text"] {
+  flex: 1;
+  padding: .6rem .75rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+}
+input[aria-invalid="true"] { border-color: var(--danger); }
+
+button {
+  font: inherit;
+  padding: .55rem .9rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+button:focus-visible, input:focus-visible {
+  outline: 3px solid #8fd1b9;
+  outline-offset: 2px;
+}
+button.danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); }
+
+.error { color: var(--danger); margin: .5rem 0 0; }
+
+.stats { display: flex; gap: 1.5rem; }
+.stats p { margin: 0; color: var(--muted); }
+.stats strong { color: var(--ink); font-size: 1.4rem; margin-right: .25rem; }
+
+.filters { display: flex; gap: .4rem; margin-bottom: .75rem; }
+.chip { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.chip.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+.task-list { list-style: none; margin: 0; padding: 0; }
+.task {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .65rem 0;
+  border-top: 1px solid var(--line);
+}
+.task label { flex: 1; display: flex; align-items: center; gap: .6rem; cursor: pointer; }
+.task.done .title { text-decoration: line-through; color: var(--muted); }
+.status { font-size: .85rem; color: var(--muted); }
+
+.empty { color: var(--muted); text-align: center; margin: 1rem 0 .25rem; }
+.fallback { text-align: center; color: var(--danger); }
