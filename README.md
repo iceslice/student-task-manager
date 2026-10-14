@@ -1,16 +1,38 @@
-# React + Vite
+# Student Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React app to add, complete, filter and delete tasks.
 
-Currently, two official plugins are available:
+## Run it (Windows / VS Code terminal)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm create vite@latest student-task-manager -- --template react
+cd student-task-manager
+npm install
+```
 
-## React Compiler
+Then replace the generated `src/` files with the ones in this project
+(delete `src/index.css` and `src/assets`), and run:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Features
+- Add tasks (empty titles rejected with a message)
+- Complete / un-complete with a checkbox
+- Delete with a confirmation prompt
+- "No tasks available" empty state
+- Total, completed and remaining counters
+- All / Pending / Completed filter
+- Reusable `Card` component using `children`
+- `ErrorBoundary` with a friendly fallback
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Submit
+```bash
+git init
+git add .
+git commit -m "Student Task Manager"
+git branch -M main
+git remote add origin https://github.com/your-username/student-task-manager.git
+git push -u origin main
+```
