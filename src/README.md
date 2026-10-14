@@ -27,12 +27,3 @@ npm run dev
 - Reusable `Card` component using `children`
 - `ErrorBoundary` with a friendly fallback
 
-## Submit
-```bash
-git init
-git add .
-git commit -m "Student Task Manager"
-git branch -M main
-git remote add origin https://github.com/your-username/student-task-manager.git
-git push -u origin main
-```
